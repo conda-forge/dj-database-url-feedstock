@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1001
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -44,3 +44,4 @@ extra:
   recipe-maintainers:
     - cshaley
     - sannykr
+    - xmnlab
