@@ -1,6 +1,6 @@
 {% set name = "dj-database-url" %}
 {% set version = "0.5.0" %}
-{% set sha256 = "4a8f575bdda4060654b1d941b571e80e53127c7844a54009b00afb3431df036c" %}
+{% set sha256 = "4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163" %}
 
 package:
   name: {{ name|lower }}
