@@ -1,6 +1,6 @@
 {% set name = "dj-database-url" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "ccf3e8718f75ddd147a1e212fca88eecdaa721759ee48e38b485481c77bca3dc" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -27,13 +27,13 @@ requirements:
 test:
   imports:
     - dj_database_url
-    
+
 about:
   home: https://github.com/jacobian/dj-database-url
   license: BSD-2-Clause
   license_family: BSD
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
-  summary: 'Use Database URLs in your Django Application.'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
+  summary: Use Database URLs in your Django Application.
   description: |
     This simple Django utility allows you to utilize the 12factor inspired 
     DATABASE_URL environment variable to configure your Django application.
