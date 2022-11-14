@@ -1,32 +1,34 @@
 {% set name = "dj-database-url" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dj-database-url-{{ version }}.tar.gz
+  sha256: ccf3e8718f75ddd147a1e212fca88eecdaa721759ee48e38b485481c77bca3dc
 
 build:
-  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - python
+    - python >=3.7,<3.11
     - pip
   run:
-    - python
-    - django >=1.8
+    - python >=3.7,<3.11
+    - django >3.2
 
 test:
   imports:
     - dj_database_url
+  commands:
+    - pip check
+  requires:
+    - pip
     
 about:
   home: https://github.com/jacobian/dj-database-url
@@ -44,4 +46,5 @@ extra:
   recipe-maintainers:
     - cshaley
     - sannykr
+    - rxm7706
     - xmnlab
