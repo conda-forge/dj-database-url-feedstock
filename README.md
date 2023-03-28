@@ -1,11 +1,11 @@
-About dj-database-url
-=====================
+About dj-database-url-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dj-database-url-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jacobian/dj-database-url
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dj-database-url-feedstock/blob/main/LICENSE.txt)
 
 Summary: Use Database URLs in your Django Application.
 
