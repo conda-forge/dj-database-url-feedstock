@@ -1,6 +1,6 @@
 {% set name = "dj-database-url" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "f2042cefe1086e539c9da39fad5ad7f61173bf79665e69bf7e4de55fa88b135f" %}
+{% set version = "3.0.1" %}
+{% set sha256 = "8994961efb888fc6bf8c41550870c91f6f7691ca751888ebaa71442b7f84eff8" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
